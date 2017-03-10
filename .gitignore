@@ -12,6 +12,7 @@
 .project
 .metadata
 bin/
+src/AlgorithmDemo/bin
 tmp/
 *.tmp
 *.bak
