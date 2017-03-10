@@ -9,11 +9,11 @@ namespace AlgorithmDemo
     {
         public static void Sort(int[] array)
         {
-            RecSort1(array, 0, array.Length - 1);
+            RecSort(array, 0, array.Length - 1);
         }
 
         //快速排序  
-        public static void RecSort1(int[] array, int first, int last)
+        public static void RecSort(int[] array, int first, int last)
         {
             if (first < last)
             {
@@ -31,31 +31,8 @@ namespace AlgorithmDemo
                         array[j--] = array[i];
                 }
                 array[i] = x;
-                RecSort1(array, first, i - 1);
-                RecSort1(array, i + 1, last);
-            }
-        }
-
-        public static void RecSort2(int[] array, int first, int last)
-        {
-            if (first < last)
-            {
-                int i = first, j = last, x = array[first];
-                while (i < j)
-                {
-                    while (i < j && array[j] >= x)
-                        j--;
-                    if(i < j)
-                        array[i++] = array[j];
-
-                    while (i < j && array[j] < x)
-                        i++;
-                    if (i < j)
-                        array[j--] = array[i];
-                }
-                array[i] = x;
-                RecSort2(array, first, i - 1);
-                RecSort2(array, i + 1, last);
+                RecSort(array, first, i - 1);
+                RecSort(array, i + 1, last);
             }
         }
     }
