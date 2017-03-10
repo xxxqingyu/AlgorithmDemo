@@ -28,9 +28,9 @@ namespace AlgorithmDemo
             return bArray;
         }
 
-        public static void Print(int[] array)
+        public static void Print(string title,int[] array)
         {
-            Console.Write("数组：");
+            Console.Write("{0}", title);
             for (int i = 0; i < array.Length; i++)
             {
                 Console.Write(" {0,3} ", array[i]);
